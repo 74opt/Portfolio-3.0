@@ -2,6 +2,8 @@ import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { useMediaQuery } from 'react-responsive';
+// @ts-expect-error Models converted from gltf become jsx
+import { Stage } from '/models/alpha_ver/jsx/StageAllStatic_v001ALPHA.jsx';
 
 const HeroExperience = () => {
     const isTablet = useMediaQuery({ query: '(max-width: 1024px)'});
@@ -21,11 +23,8 @@ const HeroExperience = () => {
                 maxPolarAngle={Math.PI / 5}
             />
 
+            <Stage />
 
-            <mesh>
-                <boxGeometry args={[1, 1, 1]}/>
-                <meshStandardMaterial color="blue" />
-            </mesh>
         </Canvas>
     )
 }
