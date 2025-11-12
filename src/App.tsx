@@ -1,4 +1,4 @@
-import Hero from './sections/hero'
+import Hero from './sections/Hero.tsx'
 
 const App = () => {
   return (
