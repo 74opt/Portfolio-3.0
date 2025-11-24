@@ -9,7 +9,7 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export function Stage(props) {
-  const { nodes, materials } = useGLTF('/models/alpha_ver/StageAllStatic_v001ALPHA.glbb')
+  const { nodes, materials } = useGLTF('/models/alpha_ver/StageAllStatic_v001ALPHA.glb')
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.Cube.geometry} material={nodes.Cube.material} />
